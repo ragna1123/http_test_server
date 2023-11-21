@@ -1,2 +1,4 @@
 .env
 Gemfile.lock
+docker-compose.yml
+Dockerfile
