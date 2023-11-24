@@ -11,7 +11,8 @@ client = Mysql2::Client.new(
   host:ENV['DB_HOST'],
   username: ENV['DB_USER'],
   password: ENV['DB_PASSWORD'],
-  database: ENV['DB_NAME']
+  database: ENV['DB_NAME'],
+  ocket: '/var/run/mysqld/mysqld.sock' 
 )
 
 # ポート番も環境変数から呼び出し

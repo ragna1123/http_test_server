@@ -4,7 +4,7 @@ FROM ruby:3
 WORKDIR /app
 
 # GemfileとGemfile.lockをコピーしてbundle installを実行
-COPY Gemfile Gemfile.lock /app/
+COPY Gemfile /app/
 RUN bundle install
 
 # その他のファイルをコピー

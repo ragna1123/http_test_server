@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  web:
+    build: ./front
+    ports:
+      - "5050:5050"
+
+  app:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "vscode_shortcut"
+    volumes:
+      - ./db_data:/var/lib/mysql
