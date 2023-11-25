@@ -17,6 +17,6 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: "vscode_shortcut"
+      MYSQL_DATABASE: "internet_tv"
     volumes:
       - ./db_data:/var/lib/mysql
