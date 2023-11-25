@@ -1,14 +1,17 @@
 // script.js
-document.getElementById('fetchDataButton').addEventListener('click', fetchData);
+// コンソールに表示
+document
+  .getElementById("fetchDataButton")
+  .addEventListener("click", consoleFetchTest);
 
-function fetchData() {
+function consoleFetchTest() {
   // サーバーからデータを取得
-  axios.get('http://localhost:3000/episodes')
-    .then(response => {
-      const dataContainer = document.getElementById('dataContainer');
-      dataContainer.innerText = `Data from server: ${JSON.stringify(response.data)}`;
+  axios
+    .get("http://localhost:3000/quiz")
+    .then((response) => {
+      console.log(response);
     })
-    .catch(error => {
-      console.error('Error fetching data:', error.message);
+    .catch((error) => {
+      console.error("Error fetching data:", error.message);
     });
 }
